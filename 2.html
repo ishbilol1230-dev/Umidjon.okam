@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMIDJON MARKET (111) - Barchasi Bir Joyda</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.umidjon111market.uz/favicon.ico"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #d32f2f;
+            --primary-dark: #b71c1c;
+            --secondary: #ffc107;
+            --secondary-dark: #ff8f00;
+            --dark: #333;
+            --light: #f5f5f5;
+            --gray: #757575;
+            --success: #4caf50;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #f9f9f9 0%, #e0e0e0 100%);
+            display: flex;
+            flex-direction: column;
+            color: var(--dark);
+        }
+
+        header {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        #icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .brand-tagline {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        main {
+            flex: 1;
+            padding: 40px 0;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 0;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+            color: var(--dark);
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn i {
+            font-size: 1.2rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .feature-card p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .contact-section {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .contact-card {
+            padding: 25px;
+            border-radius: 8px;
+            background: var(--light);
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-card h3 i {
+            font-size: 1.5rem;
+        }
+
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .contact-item:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-item img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .contact-item a {
+            color: var(--dark);
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+
+        footer {
+            background: linear-gradient(to right, #424242, #212121);
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .footer-section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .marquee {
+            background: var(--dark);
+            color: var(--secondary);
+            padding: 12px 0;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .marquee a {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        /* Registration Page Styles */
+        .registration-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .registration-info {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .registration-info h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .registration-info p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: var(--gray);
+        }
+
+        .benefits-list {
+            margin: 20px 0;
+        }
+
+        .benefits-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .benefits-list i {
+            color: var(--success);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .registration-form {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-title {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.2);
+            outline: none;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .form-footer a {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .progress-bar {
+            display: flex;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .progress-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-weight: bold;
+            color: var(--gray);
+            transition: all 0.3s;
+        }
+
+        .step-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .progress-bar::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #e0e0e0;
+            z-index: 1;
+        }
+
+        .progress-step.active .step-number {
+            background: var(--primary);
+            color: rgb(255, 255, 255);
+        }
+
+        .progress-step.active .step-label {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+        }
+
+        .form-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .form-navigation .btn {
+            width: auto;
+            padding: 10px 25px;
+        }
+
+        .success-message {
+            text-align: center;
+            padding: 30px;
+            display: none;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            color: var(--success);
+            margin-bottom: 20px;
+        }
+
+        .success-message h3 {
+            color: var(--success);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .registration-container {
+                flex-direction: column;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .form-navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .form-navigation .btn {
+                width: 100%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img id="icon" src="https://www.umidjon111market.uz/images/logo.png" alt="UMIDJON MARKET (111) Logo">
+                    <div>
+                        <div class="brand-name">UMIDJON MARKET (111)</div>
+                        <div class="brand-tagline">Xalqning Ishonchi - Barchasi Bir Joyda</div>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#" onclick="showPage('home')">Bosh Sahifa</a></li>
+                        <li><a href="#" onclick="showPage('about')">Biz Haqimizda</a></li>
+                        <li><a href="#" onclick="showPage('services')">Xizmatlar</a></li>
+                        <li><a href="#" onclick="showPage('contact')">Bog'lanish</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="marquee">
+        <div class="marquee-content">
+            <a href="https://WWW.Umidjon111Market.UZ" target="_blank">Umidjon Market (111)</a> - 
+            <span>Yangi ishchilar qabul qilinmoqda! Ro'yxatdan o'ting va jamoamizga qo'shiling!</span>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <section class="hero">
+                <h1>UMIDJON MARKET (111)</h1>
+                <p>20 yildan ortiq tajribaga ega bo'lgan kompaniyamiz har qanday turdagi tovarlar bilan ta'minlaydi. Sifat, ishonch va mijozlar qoniqishi - bu bizning asosiy tamoyillarimiz.</p>
+                <div class="cta-buttons">
+                    <a href="#" onclick="showPage('registration')" class="btn btn-primary">
+                        <i class="fas fa-briefcase"></i> ISHGA KIRISH
+                    </a>
+                    <a href="https://U77d77n.inCruises.com" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-ship"></i> SAYOHAT QILING
+                    </a>
+                </div>
+            </section>
+
+            <section class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Yuqori Sifat</h3>
+                    <p>Biz faqat eng yuqori sifatli mahsulotlarni taklif qilamiz. Har bir tovar sinovdan o'tkaziladi.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Tez Yetkazib Berish</h3>
+                    <p>Buyurtmalaringiz 24 soat ichida yetkazib beriladi. Shahar bo'ylab tez va ishonchli xizmat.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Mijozlar Xizmati</h3>
+                    <p>Bizning qo'llab-quvvatlash jamoamiz har qanday savolingizga javob berishga tayyor.</p>
+                </div>
+            </section>
+
+            <section class="contact-section">
+                <h2 class="section-title">Biz Bilan Bog'laning</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3><i class="fas fa-envelope"></i> Elektron Pochtalar</h3>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:Umidjon111Market.Mamuriyat@gmail.com" target="_blank">Ma'muriyat: Umidjon111Market.Mamuriyat@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:Umidjon111Market.Rahbariyat@gmail.com" target="_blank">Rahbariyat: Umidjon111Market.Rahbariyat@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:Umidjon111Market.HR@gmail.com" target="_blank">HR bo'limi: Umidjon111Market.HR@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:Umidjon111Market@gmail.com" target="_blank">Sotuv bo'limi: Umidjon111Market@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3><i class="fas fa-phone-alt"></i> Telefon Raqamlar</h3>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+998912425080" target="_blank">Ma'muriyat: [+998] (91) 242-50-80</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+998918287877" target="_blank">Rahbariyat: [+998] (91) 828-78-77</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+998912425080" target="_blank">HR bo'limi: [+998] (91) 242-50-80</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+998997141516" target="_blank">Sotuv bo'limi: [+998] (99) 714-15-16</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <a href="https://wa.me/+998997141516" target="_blank">Sotuv bo'limi (WhatsApp): [+998] (99) 714-15-16</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3><i class="fas fa-hashtag"></i> Ijtimoiy Sahifalar</h3>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <i class="fas fa-globe"></i>
+                                <a href="https://WWW.Umidjon111Market.UZ" target="_blank">Umidjon111Market.UZ</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-youtube"></i>
+                                <a href="https://WWW.YouTube.com/@Umidjon111Market" target="_blank">YouTube</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-instagram"></i>
+                                <a href="https://WWW.Instagram.com/Umidjon111Market" target="_blank">Instagram</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-facebook"></i>
+                                <a href="https://WWW.FaceBook.com/Umidjon111Market" target="_blank">FaceBook</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-telegram"></i>
+                                <a href="https://t.me/Umidjon111Market" target="_blank">Telegram</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <a href="https://WWW.WhatsApp.com/channel/0029Vb6x9hZ7oQhj0U84263o" target="_blank">WhatsApp Channel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Registration Page -->
+        <div id="registration" class="page">
+            <div class="registration-container">
+                <div class="registration-info">
+                    <h2>UMIDJON MARKET (111) Jamoasiga Qo'shiling!</h2>
+                    <p>20 yildan ortiq tajribaga ega kompaniyamizda ishlash imkoniyati. Biz doim yangi, iste'dodli va ijodiy odamlarni qidiramiz.</p>
+                    
+                    <div class="benefits-list">
+                        <h3>Ishchilarimiz uchun imtiyozlar:</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Rivojlanuvich ish muhiti</li>
+                            <li><i class="fas fa-check-circle"></i> O'qitish va malaka oshirish dasturlari</li>
+                            <li><i class="fas fa-check-circle"></i> Ragsbatlantirish va mukofotlar</li>
+                            <li><i class="fas fa-check-circle"></i> Ijtimoiy kafolatlar</li>
+                            <li><i class="fas fa-check-circle"></i> Moslashuvchan ish jadvali</li>
+                            <li><i class="fas fa-check-circle"></i> Karyera rivojlanishi imkoniyatlari</li>
+                        </ul>
+                    </div>
+                    
+                    <p>Ro'yxatdan o'tish jarayoni 5 daqiqadan kam vaqt oladi. Biz siz bilan tez orada bog'lanamiz!</p>
+                    
+                    <a href="https://telegra.ph/UMIDJON-MARKET-111-OILASIGA-Q%C3%95SHILING-09-10" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-info-circle"></i> Batafsil Ma'lumot
+                    </a>
+                </div>
+                
+                <div class="registration-form">
+                    <div class="progress-bar">
+                        <div class="progress-step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-label">Shaxsiy Ma'lumot</div>
+                        </div>
+                        <div class="progress-step" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-label">Ish Tajriba</div>
+                        </div>
+                        <div class="progress-step" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-label">Qo'shimcha</div>
+                        </div>
+                    </div>
+                    
+                    <form id="registrationForm">
+                        <!-- Step 1: Personal Information -->
+                        <div class="form-step active" id="step1">
+                            <h3 class="form-title">Shaxsiy Ma'lumotlar</h3>
+                            
+                            <div class="form-group">
+                                <label for="firstName">Ism *</label>
+                                <input type="text" id="firstName" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="lastName">Familiya *</label>
+                                <input type="text" id="lastName" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Telefon Raqam *</label>
+                                <input type="tel" id="phone" class="form-control" placeholder="+998 (XX) XXX-XX-XX" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Elektron Pochta *</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="birthDate">Tug'ilgan Sana *</label>
+                                <input type="date" id="birthDate" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Yashash Manzili *</label>
+                                <textarea id="address" class="form-control" rows="3" required></textarea>
+                            </div>
+                            
+                            <div class="form-navigation">
+                                <button type="button" class="btn btn-primary next-step" data-next="2">
+                                    Keyingi <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2: Work Experience -->
+                        <div class="form-step" id="step2">
+                            <h3 class="form-title">Ish Tajribasi</h3>
+                            
+                            <div class="form-group">
+                                <label for="position">Qaysi Lavozimga Ariza? *</label>
+                                <select id="position" class="form-control" required>
+                                    <option value="">-- Lavozimni tanlang --</option>
+                                    <option value="sotuvchi">Sotuvchi</option>
+                                    <option value="kassir">Kassir</option>
+                                    <option value="omborchi">Omborchi</option>
+                                    <option value="menejer">Menejer</option>
+                                    <option value="logist">Logist</option>
+                                    <option value="boshqa">Boshqa</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="experience">Ish Tajribasi (yil) *</label>
+                                <select id="experience" class="form-control" required>
+                                    <option value="">-- Tajribani tanlang --</option>
+                                    <option value="0">Tajriba yo'q</option>
+                                    <option value="1">1 yil</option>
+                                    <option value="2">2 yil</option>
+                                    <option value="3">3 yil</option>
+                                    <option value="4">4 yil</option>
+                                    <option value="5">5 yildan ko'p</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="previousJob">Oldingi Ish Joyi</label>
+                                <input type="text" id="previousJob" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="education">Ma'lumoti *</label>
+                                <select id="education" class="form-control" required>
+                                    <option value="">-- Ma'lumotni tanlang --</option>
+                                    <option value="orta">O'rta</option>
+                                    <option value="orta-maxsus">O'rta-maxsus</option>
+                                    <option value="oliy">Oliy</option>
+                                    <option value="oliy-tugallanmagan">Oliy (tugallanmagan)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="skills">Maxsus Ko'nikmalar</label>
+                                <textarea id="skills" class="form-control" rows="3" placeholder="Kompyuter bilimlari, chet tili, haydovchilik guvohnomasi va boshqalar..."></textarea>
+                            </div>
+                            
+                            <div class="form-navigation">
+                                <button type="button" class="btn btn-secondary prev-step" data-prev="1">
+                                    <i class="fas fa-arrow-left"></i> Oldingi
+                                </button>
+                                <button type="button" class="btn btn-primary next-step" data-next="3">
+                                    Keyingi <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3: Additional Information -->
+                        <div class="form-step" id="step3">
+                            <h3 class="form-title">Qo'shimcha Ma'lumotlar</h3>
+                            
+                            <div class="form-group">
+                                <label for="schedule">Qanday Ish Jadvali Qulay? *</label>
+                                <select id="schedule" class="form-control" required>
+                                    <option value="">-- Jadvalni tanlang --</option>
+                                    <option value="full">To'liq ish kuni</option>
+                                    <option value="part">Yarim kunlik</option>
+                                    <option value="flexible">Moslashuvchan</option>
+                                    <option value="shift">Smenali ish</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="salary">Kutilayotgan Ish Haqi (so'mda)</label>
+                                <input type="number" id="salary" class="form-control" placeholder="Masalan: 3000000">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="startDate">Ish boshlash mumkin bo'lgan sana *</label>
+                                <input type="date" id="startDate" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="source">Biz haqimizda qayerdan eshitdingiz? *</label>
+                                <select id="source" class="form-control" required>
+                                    <option value="">-- Manbani tanlang --</option>
+                                    <option value="internet">Internet</option>
+                                    <option value="friend">Do'stim orqali</option>
+                                    <option value="social">Ijtimoiy tarmoqlar</option>
+                                    <option value="advertisement">Reklama</option>
+                                    <option value="other">Boshqa</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="comments">Qo'shimcha Izohlar</label>
+                                <textarea id="comments" class="form-control" rows="4" placeholder="O'zingiz haqingizda qo'shimcha ma'lumot..."></textarea>
+                            </div>
+                            
+                            <div class="form-navigation">
+                                <button type="button" class="btn btn-secondary prev-step" data-prev="2">
+                                    <i class="fas fa-arrow-left"></i> Oldingi
+                                </button>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i> Arizani Yuborish
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <!-- Success Message -->
+                    <div class="success-message" id="successMessage">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Arizangiz Qabul Qilindi!</h3>
+                        <p>Hurmatli <span id="applicantName"></span>, ish uchun arizangiz muvaffaqiyatli qabul qilindi.</p>
+                        <p>Tez orada siz bilan bog'lanamiz. Rahmat!</p>
+                        <a href="#" onclick="showPage('home')" class="btn btn-primary" style="margin-top: 20px;">
+                            <i class="fas fa-home"></i> Bosh Sahifaga Qaytish
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page">
+            <section class="hero">
+                <h1>Biz Haqimizda</h1>
+                <p>Umidjon Market (111) 2004 yildan beri xizmat ko'rsatib kelayotgan ishonchli kompaniya</p>
+            </section>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Bizning Missiyamiz</h3>
+                    <p>Mijozlarimizga eng yaxshi sifat va xizmatni taqdim etish orqali ularning ishonchini qozonish va doimiy hamkorlikni rivojlantirish.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Bizning Qadriyatlarimiz</h3>
+                    <p>Sifat, ishonch, halollik, mijozlar qoniqishi va jamoa ruhi bizning asosiy qadriyatlarimizdir.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Bizning Maqsadimiz</h3>
+                    <p>Mintaqadagi eng ishonchli va keng qamrovli tovar yetkazib beruvchi kompaniyaga aylanish.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Page -->
+        <div id="services" class="page">
+            <section class="hero">
+                <h1>Xizmatlarimiz</h1>
+                <p>Keng qamrovli tovar turlari va sifatli xizmatlar</p>
+            </section>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Oziq-ovqat Mahsulotlari</h3>
+                    <p>Har xil turdagi sifatli oziq-ovqat mahsulotlari keng assortimentda.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Maishiy Kimyoviy Mahsulotlar</h3>
+                    <p>Turli xil tozalash va gigiena mahsulotlari.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Qurilish Materiallari</h3>
+                    <p>Barcha turdagi qurilish va ta'mirlash materiallari.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page">
+            <section class="hero">
+                <h1>Bog'lanish</h1>
+                <p>Biz bilan bog'laning va barcha savollaringizga javob oling</p>
+            </section>
+            
+            <section class="contact-section">
+                <h2 class="section-title">Biz Bilan Bog'laning</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3><i class="fas fa-envelope"></i> Elektron Pochtalar</h3>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:Umidjon111Market.Mamuriyat@gmail.com" target="_blank">Ma'muriyat: Umidjon111Market.Mamuriyat@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:Umidjon111Market.Rahbariyat@gmail.com" target="_blank">Rahbariyat: Umidjon111Market.Rahbariyat@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:Umidjon111Market.HR@gmail.com" target="_blank">HR bo'limi: Umidjon111Market.HR@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:Umidjon111Market@gmail.com" target="_blank">Sotuv bo'limi: Umidjon111Market@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3><i class="fas fa-phone-alt"></i> Telefon Raqamlar</h3>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+998912425080" target="_blank">Ma'muriyat: [+998] (91) 242-50-80</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+998918287877" target="_blank">Rahbariyat: [+998] (91) 828-78-77</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+998912425080" target="_blank">HR bo'limi: [+998] (91) 242-50-80</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+998997141516" target="_blank">Sotuv bo'limi: [+998] (99) 714-15-16</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <a href="https://wa.me/+998997141516" target="_blank">Sotuv bo'limi (WhatsApp): [+998] (99) 714-15-16</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3><i class="fas fa-hashtag"></i> Ijtimoiy Sahifalar</h3>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <i class="fas fa-globe"></i>
+                                <a href="https://WWW.Umidjon111Market.UZ" target="_blank">Umidjon111Market.UZ</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-youtube"></i>
+                                <a href="https://WWW.YouTube.com/@Umidjon111Market" target="_blank">YouTube</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-instagram"></i>
+                                <a href="https://WWW.Instagram.com/Umidjon111Market" target="_blank">Instagram</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-facebook"></i>
+                                <a href="https://WWW.FaceBook.com/Umidjon111Market" target="_blank">FaceBook</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-telegram"></i>
+                                <a href="https://t.me/Umidjon111Market" target="_blank">Telegram</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <a href="https://WWW.WhatsApp.com/channel/0029Vb6x9hZ7oQhj0U84263o" target="_blank">WhatsApp Channel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>UMIDJON MARKET (111)</h3>
+                    <p>20 yildan ortiq tajribaga ega bo'lgan kompaniyamiz har qanday turdagi tovarlar bilan ta'minlaydi. Sifat, ishonch va mijozlar qoniqishi - bu bizning asosiy tamoyillarimiz.</p>
+                    <div class="social-links">
+                        <a href="https://WWW.YouTube.com/@Umidjon111Market" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://WWW.Instagram.com/Umidjon111Market" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://WWW.FaceBook.com/Umidjon111Market" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://t.me/Umidjon111Market" target="_blank"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Tez Havolalar</h3>
+                    <ul>
+                        <li><a href="#" onclick="showPage('home')">Bosh Sahifa</a></li>
+                        <li><a href="#" onclick="showPage('about')">Biz Haqimizda</a></li>
+                        <li><a href="#" onclick="showPage('services')">Xizmatlar</a></li>
+                        <li><a href="#" onclick="showPage('contact')">Bog'lanish</a></li>
+                        <li><a href="#" onclick="showPage('registration')">Ishga Kirish</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Aloqa Ma'lumotlari</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Toshkent shahri, Yunusobod tumani</p>
+                    <p><i class="fas fa-phone"></i> +998 (91) 242-50-80</p>
+                    <p><i class="fas fa-envelope"></i> Umidjon111Market@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2004 • Umidjon Market (111)™ - Barcha huquqlar himoyalangan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Telegram Bot Configuration
+        const TELEGRAM_BOT_TOKEN = '8461025978:AAFq7OKAsnDOSyKwRm_nnruQKltsjBlTMxA';
+        const TELEGRAM_CHANNEL_ID = '@botbotbot_55'; // Telegram kanal username
+
+        // Page Navigation
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Form navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('registrationForm');
+            const steps = document.querySelectorAll('.form-step');
+            const progressSteps = document.querySelectorAll('.progress-step');
+            const nextButtons = document.querySelectorAll('.next-step');
+            const prevButtons = document.querySelectorAll('.prev-step');
+            const successMessage = document.getElementById('successMessage');
+            
+            // Next button functionality
+            nextButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const currentStep = this.closest('.form-step');
+                    const nextStepId = this.getAttribute('data-next');
+                    const nextStep = document.getElementById('step' + nextStepId);
+                    
+                    if (validateStep(currentStep.id)) {
+                        currentStep.classList.remove('active');
+                        nextStep.classList.add('active');
+                        
+                        // Update progress bar
+                        updateProgressBar(nextStepId);
+                    }
+                });
+            });
+            
+            // Previous button functionality
+            prevButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const currentStep = this.closest('.form-step');
+                    const prevStepId = this.getAttribute('data-prev');
+                    const prevStep = document.getElementById('step' + prevStepId);
+                    
+                    currentStep.classList.remove('active');
+                    prevStep.classList.add('active');
+                    
+                    // Update progress bar
+                    updateProgressBar(prevStepId);
+                });
+            });
+            
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (validateStep('step3')) {
+                    // Collect form data
+                    const formData = {
+                        firstName: document.getElementById('firstName').value,
+                        lastName: document.getElementById('lastName').value,
+                        phone: document.getElementById('phone').value,
+                        email: document.getElementById('email').value,
+                        birthDate: document.getElementById('birthDate').value,
+                        address: document.getElementById('address').value,
+                        position: document.getElementById('position').value,
+                        experience: document.getElementById('experience').value,
+                        previousJob: document.getElementById('previousJob').value,
+                        education: document.getElementById('education').value,
+                        skills: document.getElementById('skills').value,
+                        schedule: document.getElementById('schedule').value,
+                        salary: document.getElementById('salary').value,
+                        startDate: document.getElementById('startDate').value,
+                        source: document.getElementById('source').value,
+                        comments: document.getElementById('comments').value,
+                        timestamp: new Date().toLocaleString('uz-UZ')
+                    };
+                    
+                    // Send to Telegram
+                    sendToTelegram(formData);
+                    
+                    // Show success message
+                    document.getElementById('applicantName').textContent = formData.firstName;
+                    form.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    
+                    console.log('Form submitted successfully!');
+                    console.log('Form Data:', formData);
+                }
+            });
+            
+            // Update progress bar
+            function updateProgressBar(step) {
+                progressSteps.forEach(progressStep => {
+                    if (parseInt(progressStep.getAttribute('data-step')) <= parseInt(step)) {
+                        progressStep.classList.add('active');
+                    } else {
+                        progressStep.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Validate form step
+            function validateStep(stepId) {
+                const step = document.getElementById(stepId);
+                const inputs = step.querySelectorAll('input[required], select[required], textarea[required]');
+                let isValid = true;
+                
+                inputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        isValid = false;
+                        input.style.borderColor = 'red';
+                        1   
+                        // Remove error style when user starts typing
+                        input.addEventListener('input', function() {
+                            this.style.borderColor = '#ddd';
+                        });
+                    } else {
+                        input.style.borderColor = '#ddd';
+                    }
+                });
+                
+                if (!isValid) {
+                    alert('Iltimos, barcha kerakli maydonlarni to\'ldiring!');
+                }
+                
+                return isValid;
+            }
+            
+            // Phone number formatting
+            const phoneInput = document.getElementById('phone');
+            phoneInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                
+                if (value.startsWith('998')) {
+                    value = value.substring(3);
+                }
+                
+                if (value.length > 0) {
+                    value = '+998 (' + value;
+                }
+                
+                if (value.length > 8) {
+                    value = value.substring(0, 8) + ') ' + value.substring(8);
+                }
+                
+                if (value.length > 13) {
+                    value = value.substring(0, 13) + '-' + value.substring(13);
+                }
+                
+                if (value.length > 16) {
+                    value = value.substring(0, 16) + '-' + value.substring(16);
+                }
+                
+                e.target.value = value;
+            });
+        });
+
+        // Send data to Telegram
+        async function sendToTelegram(formData) {
+            const message = `
+🆕 YANGI ISH ARIZASI
+
+👤 ISM: ${formData.firstName} ${formData.lastName}
+📞 TELEFON: ${formData.phone}
+📧 EMAIL: ${formData.email}
+🎂 TUG'ILGAN SANASI: ${formData.birthDate}
+🏠 MANZIL: ${formData.address}
+
+💼 LAVOZIM: ${formData.position}
+📊 TAJRIBA: ${formData.experience} yil
+🎓 MA'LUMOTI: ${formData.education}
+🛠️ KO'NIKMALAR: ${formData.skills || 'Ko\'rsatilmagan'}
+
+📅 ISH JADVALI: ${formData.schedule}
+💰 ISH HAQI: ${formData.salary ? formData.salary + ' so\'m' : 'Kelishiladi'}
+📅 ISH BOSHLASH: ${formData.startDate}
+🔍 BIZNI QAYERDAN BILGAN: ${formData.source}
+
+💬 IZOH: ${formData.comments || 'Yo\'q'}
+
+⏰ ARIZA VAQTI: ${formData.timestamp}
+            `;
+            
+            try {
+                // Send to bot
+                const botResponse = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_BOT_TOKEN.split(':')[0], // Bot owner ID
+                        text: message,
+                        parse_mode: 'HTML'
+                    })
+                });
+                
+                // Send to channel
+                const channelResponse = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHANNEL_ID,
+                        text: message,
+                        parse_mode: 'HTML'
+                    })
+                });
+                
+                const botResult = await botResponse.json();
+                const channelResult = await channelResponse.json();
+                
+                if (botResult.ok && channelResult.ok) {
+                    console.log('Message sent to Telegram bot and channel successfully');
+                } else {
+                    console.error('Error sending to Telegram:', botResult, channelResult);
+                }
+            } catch (error) {
+                console.error('Error sending to Telegram:', error);
+            }
+        }
+
+        // ASCII art for console
+        const brandIcon_ascii = `Umidjon Market (111) - UMMATGA XIZMAT
+.....................................................................................................:-=+******++=-.............................................................
+.................................................................................................-+#@@@@@@@@@@@@@@=.............................................................
+.................................................................................-===+-.......-*%@@@@@@@@@@%%%@@%-..............................................................
+.................................................................................=@@@@%.....=%@@@@%@@@##%%#%@@@+................................................................
+..................................................................................=@@@@-..:#@@@@%*%%####%%%@%+:.................................................................
+...................................................................................*@@@+.=@@%%%##%%%@@@@@%*-....................................................................
+....................................................................................%@@*+@@@@@@@@@@@%#+-:.......................................................................
+....................................................................................=@@*.::------::.............................................................................
+.....................................................................................%@=.........::::...........................................................................
+.................................................................:-+*#%%%%##*+=-:....+@-.:-=*#%%@@@@@@@%#*=-....................................................................
+..............................................................:=#@@@@@@@@@@@@@@@@@@%%%@@@@@@@@@@@@@@@@@@@@@@@#+:................................................................
+............................................................:*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#-..............................................................
+...........................................................+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%=............................................................
+.........................................................:%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*+%@@@#:..........................................................
+........................................................:%@@@@@@@@@@@@@@@@@@@@@@@@+=*%@@@@@@@@@@@@@@@@@@@@@@@@@%--#@@%-.........................................................
+.......................................................:%@@@@@@@@@@@@@@@@@@@@@@@%-...-@@@@@@@*=@@@@@@@@@@@@@@@@@@=.=@@@=........................................................
+.......................................................*@@@@@@@@@@@@@@@@@@@@@@@#:...=@@@@@@%-..-%@@@@@@@@@@@@@@@@@+.:%@@-.......................................................
+......................................................-@@@@@@@@@@@@@@@@@@@@@@@*....+@@@@@@+.....:#@@@@@@@@@@@@@@@@@+.:#@%.......................................................
+......................................................#@@@@@@@@@@@@@@@@@@@@@@=...:#@@@@@*:..:=....#@@@@@@@@@@@@@@@@@-.:%@+......................................................
+.....................................................:@@@@@@@@@@@@@@@@@@@@@%-...-%@@@@%-...+@@*....*@@@@@@@@@@@@@@@@%..+@%......................................................
+.....................................................-@@@@@@@@@@@@@@@@@@@@#:...=@@@@@@#:.-%@@@@#:...+@@@@@@@@@@@@@@@@=.:@@-.....................................................
+.....................................................=@@@@@@@@@@@@@@@@@@@*....*@@@@@@@@%#@@@@@@@%:...=@@@@@@@@@@@@@@@#..%@=.....................................................
+.....................................................-@@@@@@@@@@@@@@@@@@=...:#@@@*...+@@@#...=@@@%-...-@@@@@@@@@@@@@@@..%@=.....................................................
+.....................................................:@@@@@@@@@@@@@@@@%-...-%@@@@*...+@@@#...=@@@@@=...-%@@@@@@@@@@@@@::@@-.....................................................
+......................................................%@@@@@@@@@@@@@@#:...=@@@@@@*...+@@@#...=@@@@@@+...:%@@@@@@@@@@@%.+@@:.....................................................
+......................................................*@@@@@@@@@@@@@*....*@@@@@@@*...+@@@#...=@@@@@@@*...:#@@@@@@@@@@*-@@*......................................................
+......................................................:@@@@@@@@@@@@=.....-=+*##%@%...:#%%=...*@@@@@@@@*....*@@@@@@@@@#%@@-......................................................
+.......................................................*@@@@@@@@@@%*+=--:......:%@#-.......:+@%+++#@@@@#:...+@@@@@@@@@@@#.......................................................
+........................................................%@@@@@@@@@@@@@@@@@%%#*+%@@@@%##**#%@@@@=..:%@@@@%:...*@@@@@@@@@@-.......................................................
+........................................................-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-..-@@@@@%+#@@@@@@@@@@@+........................................................
+.........................................................=@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%...+@@@@@@@@@@@@@@@@@*.........................................................
+..........................................................=@@@@@@@@@@@@*---------================:...#@@@@@@@@@@@@@@@#..........................................................
+...........................................................-%@@@@@@@@@@*.............................:%@@@@@@@@@@@@@*...........................................................
+............................................................:#@@@@@@@@@%###***************************%@@@@@@@@@@@%=............................................................
+..............................................................+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*:.............................................................
+...............................................................:#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%-...............................................................
+.................................................................-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%=.................................................................
+...................................................................-*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%=...................................................................
+.....................................................................:=#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%+:.....................................................................
+.........................................................................:-======--------===++++***++=-.........................................................................
+`;
+
+        const brandName_ascii = `Umidjon Market (111) - XALQNING ISHONCHI
+ /$$   /$$               /$$       /$$                               /$$      /$$                     /$$                   /$$             /$$$   /$$     /$$     /$$   /$$$  
+| $$  | $$              |__/      | $$                              | $$$    /$$$                    | $$                  | $$            /$$_/ /$$$$   /$$$$   /$$$$  |_  $$ 
+| $$  | $$ /$$$$$$/$$$$  /$$  /$$$$$$$ /$$  /$$$$$$  /$$$$$$$       | $$$$  /$$$$  /$$$$$$   /$$$$$$ | $$   /$$  /$$$$$$  /$$$$$$         /$$/  |_  $$  |_  $$  |_  $$    \\  $$
+| $$  | $$| $$_  $$_  $$| $$ /$$__  $$|__/ /$$__  $$| $$__  $$      | $$ $$/$$ $$ |____  $$ /$$__  $$| $$  /$$/ /$$__  $$|_  $$_/        | $$     | $$    | $$    | $$     | $$
+| $$  | $$| $$ \\ $$ \\ $$| $$| $$  | $$ /$$| $$  \\ $$| $$  \\ $$      | $$  $$$| $$  /$$$$$$$| $$  \\__/| $$$$$$/ | $$$$$$$$  | $$          | $$     | $$    | $$    | $$     | $$
+| $$  | $$| $$ | $$ | $$| $$| $$  | $$| $$| $$  | $$| $$  | $$      | $$\\  $ | $$ /$$__  $$| $$      | $$_  $$ | $$_____/  | $$ /$$      |  $$    | $$    | $$    | $$     /$$/
+|  $$$$$$/| $$ | $$ | $$| $$|  $$$$$$$| $$|  $$$$$$/| $$  | $$      | $$ \\/  | $$|  $$$$$$$| $$      | $$ \\  $$|  $$$$$$$  |  $$$$/       \\  $$$ /$$$$$$ /$$$$$$ /$$$$$$ /$$$/ 
+ \\______/ |__/ |__/ |__/|__/ \\_______/| $$ \\______/ |__/  |__/      |__/     |__/ \\_______/|__/      |__/  \\__/ \\_______/   \\___/          \\___/|______/|______/|______/|___/  
+                                 /$$  | $$                                                                                                                                     
+                                |  $$$$$$/                                                                                                                                     
+                                 \\______/                                                                                                                                      
+Umidjon Market (111) - BARCHASI BIR JOYDA`;
+
+        // Console log
+        console.log(brandIcon_ascii);
+        console.log(brandName_ascii);
+    </script>
+
+</body>
+</html>
